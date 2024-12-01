@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "234903321426",
+    "project_id": "noskillwork-45d8e",
+    "storage_bucket": "noskillwork-45d8e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234903321426:android:2f1ed5c219b0cda8b0188b",
+        "android_client_info": {
+          "package_name": "com.proj.noskillwork"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1exlKFiq40SaD2o0PpoEUDngk5RlXfAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
