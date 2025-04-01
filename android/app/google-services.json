@@ -7,9 +7,28 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:234903321426:android:2f1ed5c219b0cda8b0188b",
+        "mobilesdk_app_id": "1:234903321426:android:7df3532aa9d0f453b0188b",
         "android_client_info": {
-          "package_name": "com.proj.noskillwork"
+          "package_name": "com.anay04.nsw"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1exlKFiq40SaD2o0PpoEUDngk5RlXfAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234903321426:android:2903d2669a223946b0188b",
+        "android_client_info": {
+          "package_name": "com.example.nsw"
         }
       },
       "oauth_client": [],

@@ -108,7 +108,7 @@ class JobDetailsPage extends StatelessWidget {
             margin: const EdgeInsets.all(16.0),
             child: ElevatedButton(
               onPressed: () {
-                // TODO: Implement application logic
+                _showApplicationDialog(context);
                 _showApplicationDialog(context);
               },
               style: ElevatedButton.styleFrom(

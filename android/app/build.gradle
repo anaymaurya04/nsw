@@ -1,14 +1,13 @@
 plugins {
     id "com.android.application"
     id "kotlin-android"
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services" 
 }
 
 android {
-    
     namespace = "com.example.nsw"
-    compileSdk = 34 // Ensure this matches your installed SDK version (update if necessary).
+    compileSdk = 34 // Matches targetSdkVersion now
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -22,16 +21,26 @@ android {
 
     defaultConfig {
         applicationId = "com.example.nsw"
-        minSdkVersion 23 // Updated to 23 as required by `firebase_auth`.
-        targetSdkVersion 33 // Match the compileSdk version.
+        minSdkVersion 23 // Required by firebase_auth
+        targetSdkVersion 34 // Updated to match compileSdk
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        multiDexEnabled true // Added for Firebase compatibility if needed
+    }
+
+    signingConfigs {
+        release {
+            // Replace with your actual keystore details for production
+            storeFile file("myapp.keystore") // Update path as needed
+            storePassword "password"         // Replace with your password
+            keyAlias "alias"                // Replace with your alias
+            keyPassword "password"          // Replace with your password
+        }
     }
 
     buildTypes {
         release {
-            // Add your signing config for release builds here.
-            signingConfig = signingConfigs.debug
+            signingConfig signingConfigs.release // Updated to use release signing config
         }
     }
 }

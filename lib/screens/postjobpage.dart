@@ -29,7 +29,6 @@ class _PostJobPageState extends State<PostJobPage> {
 
   void _submitJob() {
     if (_formKey.currentState!.validate()) {
-      // TODO: Implement Firebase or backend job posting logic
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Job Posted: ${_titleController.text}')),
       );
