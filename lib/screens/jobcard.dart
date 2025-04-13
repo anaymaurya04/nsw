@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'jobdetail.dart'; // Import the new details page
+import 'jobdetail.dart';
 
 class JobCard extends StatelessWidget {
+  final String id; // Firestore document ID
   final String title;
   final String description;
   final String days;
@@ -10,6 +11,7 @@ class JobCard extends StatelessWidget {
 
   const JobCard({
     super.key,
+    required this.id,
     required this.title,
     required this.description,
     this.days = "",
@@ -21,15 +23,13 @@ class JobCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigate to job details page when card is tapped
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => JobDetailsPage(
-              title: title,
-              description: description,
-              days: days,
-              hours: hours,
-              pay: pay,
+              jobId: id,
+              title: '',
+              description: '',
+              pay: '',
             ),
           ),
         );
